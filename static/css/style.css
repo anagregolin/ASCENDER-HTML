@@ -1156,6 +1156,10 @@ button:hover,
   .redes-sociais {
     justify-content: center;
   }
+
+  .main .p{
+    display: none;
+  }
 }
 
 @media (max-width: 400px) {
@@ -1237,7 +1241,7 @@ button:hover,
     margin: 0;
     text-align: center;
     align-self: center;
-    display: none;
+    display: block;
   }
 }
 
@@ -1370,5 +1374,23 @@ button:hover,
 }
 .password-container .toggle-password:hover {
   opacity: 1;
+}
+
+@media (max-width: 768px) {
+    *, *::before, *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        display: inline;
+    }
+}
+
+@media (max-width: 768px) {
+    .cadastro-aula, .cadastro {
+        max-width: 100%;
+        padding: 0 20px;
+        text-align-last: left;
+    }
 }
 
