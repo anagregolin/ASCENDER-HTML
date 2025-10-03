@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login - Ascender</title>
-  <link rel="stylesheet" href=  "../static/style.css">
+  <link rel="stylesheet" href="../static/style.css">
 
   <link href="dashboardaluno.html" rel="stylesheet">
+  <script src="../static/script.js"></script>
 </head>
+
 <body>
 
   <!-- HEADER -->
@@ -21,20 +24,23 @@
   </header>
 
   <!-- MAIN -->
-  <main >
+  <main>
     <section class="intro">
       <h2>Entre na sua conta!</h2>
-      <p>para acessar seu perfil, <br> 
-         agendar aulas e controlar <br> 
-         seu progresso.</p>
+      <p>para acessar seu perfil, <br>
+        agendar aulas e controlar <br>
+        seu progresso.</p>
     </section>
 
     <section class="login">
       <h2>Login</h2>
-      <form action="dashbord_adm.html" method="post" >
+      <form action="dashbord_adm.html" method="post">
         <input type="email" id="email" name="email" placeholder="Insira seu e-mail" required>
-        <input type="password" id="senha" name="senha" placeholder="Insira sua senha" required>
-        <button href="" type="submit">  Concluído </button>
+        <div class="campo-senha">
+          <input type="password" id="senha" placeholder="Digite sua senha">
+          <span id="toggleSenha" class="olho">&#128065;</span>
+        </div>
+        <button href="" type="submit"> Concluído </button>
       </form>
 
       <p class="cadastro">Não possui uma conta? <a href="cadastro.html"><br>Crie agora</a></p>
@@ -42,19 +48,19 @@
   </main>
 </body>
 
-  <footer class="rodape">
-    <div class="conteudo-rodape">
-      <div class="coluna-esquerda">
-        <h3>ASCENDER</h3>
-        <p><a href="home.html">Sobre nós</a></p>
-      </div>
-      <div class="coluna-direita">
-        <p>Rua das Acácias, 123</p>
-        <p>Bairro Jardim Primavera</p>
-        <p>São Paulo - SP</p>
-        <p>CEP: 01234-567</p>
-      </div>
+<footer class="rodape">
+  <div class="conteudo-rodape">
+    <div class="coluna-esquerda">
+      <h3>ASCENDER</h3>
+      <p><a href="home.html">Sobre nós</a></p>
     </div>
-  </footer>
+    <div class="coluna-direita">
+      <p>Rua das Acácias, 123</p>
+      <p>Bairro Jardim Primavera</p>
+      <p>São Paulo - SP</p>
+      <p>CEP: 01234-567</p>
+    </div>
+  </div>
+</footer>
 
 </html>
