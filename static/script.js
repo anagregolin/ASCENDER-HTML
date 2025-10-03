@@ -23,7 +23,27 @@ function fecharModal() {
   // A CAIXA SUMIRÁ (DISPLAY:NONE)
 }
 
+// Espera o carregamento completo da página
+window.onload = function () {
 
+  console.log("Script carregado!");
+
+  // Código para alternar a visibilidade da senha
+  const inputSenha = document.getElementById('senha');
+  const toggleSenha = document.getElementById('toggleSenha');
+
+  toggleSenha.addEventListener('click', () => {
+    console.log("Clicou no ícone de olho!");
+    if (inputSenha.type === 'password') {
+      inputSenha.type = 'text';
+      toggleSenha.textContent = '⌣'; // muda o ícone quando mostrar
+    } else {
+      inputSenha.type = 'password';
+      toggleSenha.textContent = '👁'; // volta ao ícone original
+    }
+  });
+
+}
 
 
 
