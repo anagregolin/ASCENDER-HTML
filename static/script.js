@@ -36,7 +36,7 @@ window.onload = function () {
     console.log("Clicou no ícone de olho!");
     if (inputSenha.type === 'password') {
       inputSenha.type = 'text';
-      toggleSenha.textContent = '🙈'; // muda o ícone quando mostrar
+      toggleSenha.textContent = '⌣'; // muda o ícone quando mostrar
     } else {
       inputSenha.type = 'password';
       toggleSenha.textContent = '👁'; // volta ao ícone original
