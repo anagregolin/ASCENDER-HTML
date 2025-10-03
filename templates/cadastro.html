@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link href="login.html" rel="stylesheet">
+    <link rel="stylesheet" href=  "../static/style.css">
+
+   
+
+</head>
+<body>
+
+    <!-- HEADER -->
+  <header>
+    <div class="logo">
+        <img src="../static/img/logo-ascender.jpg" alt="Ascender Logo">
+    </div>
+    <nav>
+      <a href="home.html">Sobre</a>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main >
+    <section class="intro">
+      <h2>Faça parte da <br> nossa equipe!</h2>
+      <p>Crie sua conta e dê o<br> 
+        primeiro passo rumo a  <br> 
+        mais energia, força e <br>
+        bem-estar.</p>
+    </section>
+
+    <section class="cadastro">
+      <h2>Cadastro</h2>
+      <form action="{{ url_for('cadastro') }}" method="post" >
+
+
+        <input type="text" id="nome" name="nome" placeholder="Insira seu nome" required>
+        <input type="email" id="email" name="email" placeholder="Insira seu e-mail" required>
+          <input type="text"
+                    id="cpf"
+                    name="cpf"
+                    placeholder="Insira seu CPF"
+                    pattern="\d{11}"
+                    maxlength="11"
+                    inputmode="numeric"
+                    oninput="this.value = this.value.replace(/\D/g, '')"
+                    required>
+          <input type="text"
+                    id="telefone"
+                    name="telefone"
+                    placeholder="Insira seu telefone"
+                    pattern="\d{11}"
+                    maxlength="11"
+                    inputmode="numeric"
+                    oninput="this.value = this.value.replace(/\D/g, '')"
+                    required>
+        <input type="password" id="senha" name="senha" placeholder="Crie uma senha" required>
+        <input type="password" id="confirma" name="confirma" placeholder="Confirme sua senha" required>
+        <button type="submit"> Concluído </button>
+      </form>
+         {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for category, message in messages %}
+                        <div class="flash {{ category }}">{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+    </section>
+  </main> 
+</body>
+
+<footer class="rodape">
+    <div class="conteudo-rodape">
+    <div class="coluna-esquerda">
+        <h3>ASCENDER</h3>
+        <p><a href="home.html">Sobre nós</a></p>
+    </div>
+    <div class="coluna-direita">
+        <p>Rua das Acácias, 123</p>
+        <p>Bairro Jardim Primavera</p>
+        <p>São Paulo - SP</p>
+        <p>CEP: 01234-567</p>
+    </div>
+</div>
+</footer>
+
+</html>
