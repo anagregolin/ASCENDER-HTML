@@ -1233,6 +1233,7 @@ button:hover,
     flex-direction: row;
     gap: 100px;
     padding: 20px;
+    display: contents;
   }
 }
 
@@ -1376,15 +1377,6 @@ button:hover,
   opacity: 1;
 }
 
-@media (max-width: 768px) {
-    *, *::before, *::after {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        text-decoration: none;
-        display: inline;
-    }
-}
 
 @media (max-width: 768px) {
     .cadastro-aula, .cadastro {
@@ -1394,3 +1386,31 @@ button:hover,
     }
 }
 
+@media (max-width: 768px) {
+    *, *::before, *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        text-align-last: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .cadastro-aula, .cadastro {
+        max-width: 100%;
+        padding: 0 20px;
+        text-align-last: left;
+        align-self: center;
+    }
+}
+
+@media (max-width: 850px) {
+    .intro {
+        margin: 0;
+        text-align: unset;
+        align-self: self-start;
+        display: block;
+        justify-self: center;
+    }
+}
